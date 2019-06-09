@@ -20,3 +20,13 @@
   - Edit the event detail view using the card compnent of Angular Material
   - User interaction through events
   - Add the event detail component reference to the event list component
+
+
+# Lab 03 - Routing Basics
+
+  - Modify the project folder structure 
+  - Create a module for each toolbar option
+  - Create a shared module to put all other common features that will be shared with other parts of the app
+  - Create a basic routing system
+  - Add the created routes to the toolbar links
+  - Change the event model to interface by Angular best practices
