@@ -1,8 +1,9 @@
 <!-- Main Toolbar using the Material Toolbar Component -->
 <!-- Use of the primary color of Indigo Pink Theme -->
 <mat-toolbar color="primary">
-  <a mat-button>Home</a>
-  <a mat-button>Events</a>
-  <a mat-button>Profile</a>
-  <a mat-button>Login</a>
+  <!-- Include routes in the links to navigate through the app -->
+  <a mat-button routerLink="/home" routerLinkActive="activeLink">Home</a>
+  <a mat-button routerLink="/events" routerLinkActive="activeLink">Events</a>
+  <a mat-button routerLink="/profile" routerLinkActive="activeLink">Profile</a>
+  <a mat-button routerLink="/login" routerLinkActive="activeLink">Login</a>
 </mat-toolbar>

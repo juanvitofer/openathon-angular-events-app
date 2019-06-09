@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 /* Models */
-import { Event } from '../models/event';
+import { Event } from '../../models/event';
 
 @Component({
   selector: 'oevents-event-details',

@@ -1,7 +1,7 @@
 /**
- * Class which defines an event
+ * Interface  which defines an event
  */
-export class Event {
+export interface  Event {
     id: string; // event identifier
     title: string; // event title
     location: string; // event location

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 /* Models */
-import { Event } from '../models/event';
+import { Event } from '../../models/event';
 
 /* Create an event array */
 const EVENTS: Event[] = [
