@@ -68,4 +68,12 @@ export class EventListComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Method to know which event is selected
+   * @param event: selected event
+   */
+  onSelectEvent(event: Event) {
+    this.selectedEvent = event;
+  }
+
 }
