@@ -6,6 +6,7 @@ import { EventsModule } from './events/events.module';
 import { LoginModule } from './login/login.module';
 import { ProfileModule } from './profile/profile.module';
 import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from './core/core.module';
 /* Components */
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -25,7 +26,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SharedModule,
     EventsModule,
     LoginModule,
-    ProfileModule
+    ProfileModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
