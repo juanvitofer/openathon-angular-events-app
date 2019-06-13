@@ -14,6 +14,8 @@ export class EventListComponent implements OnInit {
   events: Event[];
   /* Property which contains the selected event */
   selectedEvent: Event;
+  /* Property which contains the table columns to display in the table header */
+  displayedColumns: string[] = ['Date', 'Location', 'Title'];
 
   /**
    * Constructor

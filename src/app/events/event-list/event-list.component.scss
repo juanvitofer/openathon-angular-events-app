@@ -2,7 +2,18 @@
 .container {
     display: flex;
     justify-content: center;
+    flex-flow: column;
+    margin: 10%;
+    margin-top: 2%;
 }
-#eventDetails{
-    max-width: 600px;
+#add-event-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+button {
+    max-width: 100px;
+}
+table {
+    width: 100%;
+    margin-top: 10px;
 }
