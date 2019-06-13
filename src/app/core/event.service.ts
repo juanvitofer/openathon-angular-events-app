@@ -7,6 +7,8 @@ import { Observable, throwError  } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 /** Import enviroment file */
 import { environment } from '../../environments/environment';
+/* Models */
+import { Event } from "../models/event";
 
 @Injectable({
   providedIn: 'root'
@@ -48,6 +50,42 @@ export class EventService {
       retry(3),
       catchError(this.handleError)
     );
+  }
+
+  /**
+   * Method which adds an event
+   * @param event: Event to add
+   */
+  addEvent(event: Event): Observable<any> {
+    // Create the header
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    // Set the enviroment and header
+    return this.http
+      .post(environment.apiURL + 'events/', event, { headers })
+      .pipe(
+        retry(3),
+        catchError(this.handleError)
+      );
+  }
+
+  /**
+   * Method which updates an event
+   * @param event: Event to update
+   */
+  updateEvent(event: Event): Observable<any> {
+    // Create the header
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    // Set the enviroment and header
+    return this.http
+      .put(environment.apiURL + 'events/' + event.id, event, { headers })
+      .pipe(
+        retry(3),
+        catchError(this.handleError)
+      );
   }
 
   /**
