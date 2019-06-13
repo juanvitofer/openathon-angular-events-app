@@ -30,3 +30,11 @@
   - Create a basic routing system
   - Add the created routes to the toolbar links
   - Change the event model to interface by Angular best practices
+
+
+# Lab 04 - Services
+
+  - Create a service
+  - Consume a service through Dependency Injection
+  - Get data from an API using Observables
+  - Manage environment variables
