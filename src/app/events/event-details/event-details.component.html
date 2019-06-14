@@ -1,9 +1,13 @@
 <!-- Main Container -->
 <div class="container">
   <!-- Event Card Detail -->
-  <div id="event-card-details">
-    <!-- Edit Event button -->
+  <div id="event-card-details" *ngIf="event">
     <div id="edit-event-btn">
+    <!-- Delete Event button -->
+      <button id="delete-btn" mat-raised-button color="warn" (click)="deleteEvent(event)" >
+        Delete Event
+      </button>
+      <!-- Edit Event button -->
       <button mat-raised-button color="primary" [routerLink]="['/addEditEvent/', event.id]">
         Edit Event
       </button>

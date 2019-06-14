@@ -35,4 +35,18 @@ export class EventDetailsComponent implements OnInit {
     });
   }
 
+  /**
+   * Method which deletes an event
+   * @param event: Event to delete
+   */
+  deleteEvent(event: Event) {
+    // Display de event to delete in console
+    console.log(event);
+    // Display a message when deleting the event
+    this.eventService.deleteEvent(event.id).subscribe(() => {
+      console.log('Event Removed');
+    });
+    // Navigate to the events page
+    this.router.navigate(['/events']);
+  }
 }

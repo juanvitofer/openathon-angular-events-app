@@ -89,6 +89,22 @@ export class EventService {
   }
 
   /**
+   * Method which deletes an event
+   * @param id: Event identifier
+   */
+  deleteEvent(id: string): Observable<any> {
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json"
+    });
+    return this.http
+      .delete(environment.apiURL + "events/" + id, { headers })
+      .pipe(
+        retry(3),
+        catchError(this.handleError)
+      );
+  }
+
+  /**
    * Method which handles an error
    * @param error: error to handle
    */
