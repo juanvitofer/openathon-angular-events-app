@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 /* Import HttpClient for making the request over the HTTP protocol */
+/* Import HttpErrorResponse to retunr an http error message */
 /* Import HttpHeaders to add simple headers */
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 /* Import RxJS library */
 import { Observable, throwError  } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-/** Import enviroment file */
+/* Import enviroment file */
 import { environment } from '../../environments/environment';
 /* Models */
-import { Event } from "../models/event";
+import { Event } from '../models/event';
 
 @Injectable({
   providedIn: 'root'

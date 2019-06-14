@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 /* Services */
 import { EventService } from './event.service';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [],
@@ -11,7 +12,8 @@ import { EventService } from './event.service';
     HttpClientModule
   ],
   providers: [
-    EventService
+    EventService,
+    UserService
   ]
 })
 export class CoreModule { }
