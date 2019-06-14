@@ -58,6 +58,6 @@ export class LoginComponent implements OnInit {
       } else {
         this.msgs = res;
       }
-    }, err => this.msgs = 'Email not found.')
+    }, err => this.msgs = 'Email not found.');
   }
 }
