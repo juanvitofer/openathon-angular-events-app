@@ -3,3 +3,14 @@
     font-family: 'Fredericka the Great', cursive;
     font-size: 24pt;
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userData {
+    margin-top: 5rem;
+    h4 {
+        display: inline-block;
+    }
+}
