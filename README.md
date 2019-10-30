@@ -38,3 +38,9 @@
   - Consume a service through Dependency Injection
   - Get data from an API using Observables
   - Manage environment variables
+
+
+# Lab 05 - Routing 2 and CRUD
+
+  - Implement CRUD operations
+  - Send parameters through URL and read them
