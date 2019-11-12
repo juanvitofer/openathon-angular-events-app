@@ -46,7 +46,7 @@
   - Send parameters through URL and read them
 
 
-# Lab 06 - Central State management
+# Lab 06 - Central State Management
 
-    - Create a central store to login
-    - Implements filter events with Effects
+   - Create a central store to login
+   - Implements filter events with Effects
