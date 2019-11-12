@@ -15,6 +15,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 /* State Management */
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './app.store';
+import { EffectsModule } from '@ngrx/effects';
+import { LayoutEffects } from './store/layout/layout.effects';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { reducers } from './app.store';
     LoginModule,
     ProfileModule,
     CoreModule,
-    StoreModule.forRoot(reducers)
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([LayoutEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

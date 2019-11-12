@@ -95,10 +95,10 @@ export class EventService {
    */
   deleteEvent(id: string): Observable<any> {
     const headers = new HttpHeaders({
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json'
     });
     return this.http
-      .delete(environment.apiURL + "events/" + id, { headers })
+      .delete(environment.apiURL + 'events/' + id, { headers })
       .pipe(
         retry(3),
         catchError(this.handleError)
@@ -122,5 +122,19 @@ export class EventService {
     }
     // Return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');
+  }
+
+  /**
+   * Method which gets the filtered data
+   * @param filter: FIlter
+   */
+  getFilteredEvents(filter): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.http.get(environment.apiURL + 'events?' + filter, { headers }).pipe(
+      retry(3),
+      catchError(this.handleError)
+    );
   }
 }
