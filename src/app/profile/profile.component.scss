@@ -1,16 +1,22 @@
 /** Styles for the Profile Page Component */
-.title {
-    font-family: 'Fredericka the Great', cursive;
-    font-size: 24pt;
-}
+@import '../shared/styles/variables';
+
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @include container();
+  @include background('/assets/img/patt5.png', center, contain);
 }
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+
 .userData {
-    margin-top: 5rem;
-    h4 {
-        display: inline-block;
-    }
+  margin-top: 5rem;
+  padding: 1rem;
+  background-color: rgba(255,255,255,0.9);
+
+  h4 {
+    display: inline-block;
+  }
 }

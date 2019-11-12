@@ -1,17 +1,24 @@
 /* Styles for the Add-Edit-Event Component */
+@import '../../shared/styles/variables';
+
 .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  @include container();
+  @include background('/assets/img/patt4.png', center, cover);
 }
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+
 form {
-    display: flex;
-    flex-flow: column;
-    width: 40%;
+  display: flex;
+  flex-flow: column;
+  width: 40%;
+  font-family: $acn-font;
 }
-#save-btn {
-    display: flex;
-    justify-content: flex-end;
+
+.save-btn {
+  display: flex;
+  justify-content: flex-end;
 }

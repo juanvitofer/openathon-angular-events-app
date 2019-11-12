@@ -1,27 +1,32 @@
 <div class="container">
-  <h2>Login</h2>
+  <!-- Login Section Title -->
+  <div class="section-title">
+    <h1>Login</h1>
+  </div>
   <!-- Login form -->
-  <form class="form-login" novalidate [formGroup]="loginForm" #fform="ngForm" (ngSubmit)="onSubmit()">
-    <!-- Email Field -->
-    <mat-form-field>
-      <input matInput placeholder="Email" type="text" formControlName="email" />
-    </mat-form-field>
-    <!-- Password Field -->
-    <mat-form-field>
-      <input matInput placeholder="Password" type="password" formControlName="password" />
-    </mat-form-field>
-    <!-- Messages Area -->
-    <div *ngIf="msgs" class="msgs">
-      {{msgs}} <!-- Data binding for messages -->
-    </div>
-    <!-- Login Area -->
-    <div class="login-btn">
-      <!-- Signup Link -->
-      <div>Need an account? <a routerLink="/signup">Sign up</a></div>
-      <!-- Login Button -->
-      <button mat-raised-button color="primary" type="submit">
-        Login
-      </button>
-    </div>
-  </form>
+  <div class="form">
+    <form class="form-login" novalidate [formGroup]="loginForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+      <!-- Email Field -->
+      <mat-form-field>
+        <input matInput placeholder="Email" type="text" formControlName="email" />
+      </mat-form-field>
+      <!-- Password Field -->
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" formControlName="password" />
+      </mat-form-field>
+      <!-- Messages Area -->
+      <div *ngIf="msgs" class="msgs">
+        {{msgs}} <!-- Data binding for messages -->
+      </div>
+      <!-- Login Area -->
+      <div class="login-btn">
+        <!-- Signup Link -->
+        <div class="sign-up">Need an account? <a routerLink="/signup">Sign up</a></div>
+        <!-- Login Button -->
+        <button mat-raised-button color="primary" type="submit">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
 </div>

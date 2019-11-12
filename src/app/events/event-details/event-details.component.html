@@ -1,10 +1,14 @@
 <!-- Main Container -->
 <div class="container">
+  <!-- Event Detail Title -->
+  <div class="section-title">
+    <h1>Event details</h1>
+  </div>
   <!-- Event Card Detail -->
   <div id="event-card-details" *ngIf="event">
-    <div id="edit-event-btn">
+    <div class="edit-event-btn">
     <!-- Delete Event button -->
-      <button id="delete-btn" mat-raised-button color="warn" (click)="deleteEvent(event)" >
+      <button class="delete-btn" mat-raised-button color="warn" (click)="deleteEvent(event)">
         Delete Event
       </button>
       <!-- Edit Event button -->
@@ -13,20 +17,24 @@
       </button>
     </div>
     <!-- Card Component of Angular Material -->
-    <mat-card *ngIf="event" id="eventDetails">
+    <mat-card class="event">
       <!-- Header-->
-      <mat-card-header>
+      <mat-card-header class="header">
         <!-- Title-->
-        <mat-card-title>
+        <mat-card-title class="title">
           <h3>{{event.title | uppercase}}</h3>
         </mat-card-title>
         <!-- Subtitle-->
-        <mat-card-subtitle>
+        <mat-card-subtitle class="subtitle">
           <p>{{event.location}} - {{event.date | date: 'dd/MM/yyyy'}} </p>
         </mat-card-subtitle>
       </mat-card-header>
+      <!-- Image -->
+      <div class="img">
+          <img mat-card-image src="{{imageUrl}}" alt="Photo">
+      </div>
       <!-- Description -->
-      <mat-card-content>
+      <mat-card-content class="content">
         <p>{{event.description}}
         </p>
       </mat-card-content>
