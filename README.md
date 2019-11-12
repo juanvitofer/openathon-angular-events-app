@@ -50,3 +50,8 @@
 
    - Create a central store to login
    - Implements filter events with Effects
+
+# Lab 06 - Styles
+
+   - Create generic styling files
+   - Edit component styles
