@@ -44,3 +44,9 @@
 
   - Implement CRUD operations
   - Send parameters through URL and read them
+
+
+# Lab 06 - Central State management
+
+    - Create a central store to login
+    - Implements filter events with Effects
