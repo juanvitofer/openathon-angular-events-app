@@ -12,6 +12,9 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+/* State Management */
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './app.store';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     EventsModule,
     LoginModule,
     ProfileModule,
-    CoreModule
+    CoreModule,
+    StoreModule.forRoot(reducers)
   ],
   providers: [],
   bootstrap: [AppComponent]

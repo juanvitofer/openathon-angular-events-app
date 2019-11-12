@@ -6,10 +6,15 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 /* Import RxJS library */
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry, map } from 'rxjs/operators';
+/* Import Store by ngrx */
+import { Store } from '@ngrx/store';
 /* Import enviroment file */
 import { environment } from '../../environments/environment';
 /* Models */
 import { User } from '../models/user';
+/* Import Login Actions */
+import * as login from '../store/login/login.actions';
+
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +26,11 @@ export class UserService {
   /**
    * Constructor
    * @param http: http client service
+   * @param store: Store
    */
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private store: Store<any>) { }
 
   /**
    * Method which signs up an user
@@ -89,6 +97,8 @@ export class UserService {
    */
   private setUser() {
     this.isAuthenticated = localStorage.getItem('user') ? true : false;
+    // It's dispatched the action with true/false payload depending on the authentication variable
+    this.isAuthenticated ? this.store.dispatch(new login.Logged(true)) : this.store.dispatch(new login.Logged(false));
   }
 
   /**
